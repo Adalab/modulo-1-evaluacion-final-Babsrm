@@ -5,16 +5,14 @@
     grid-template-columns: 100%;
     grid-template-rows: 20%;
     text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center; esto no está bien centraaaaadoooo. tengo que usar griiiid
     &--title{
         text-transform: capitalize;
         font-family: $font-title;
         font-size: 24px;
     }
     &--paragraph{
+        display: grid;
+        justify-content: center;
         &__title{
             font-family: $font-title;
             font-size: 18px;
@@ -37,7 +35,7 @@
         width: 184px;
         height: 45px;
         border-radius: 25px;
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: center;
         transform: translate(75px, 25px);
@@ -54,10 +52,6 @@
         line-height: 45px;
     }
     &--paragraph{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         &__title{
             font-size: 24px;
         }
@@ -85,10 +79,6 @@
         line-height: 45px;
     }
     &--paragraph{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         &__title{
             font-size: 30px;
         }
