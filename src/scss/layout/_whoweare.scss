@@ -23,6 +23,7 @@
       line-height: 30px;
   }
 }
+
 .gotobutton{
     width: 76px;
     height: 45px;
@@ -35,4 +36,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media all and (min-width: 768px) {
+    .intropar{
+        padding: 39px;
+        &--title {
+            width: 600px;
+            font-size: 26px;
+        }
+        &--paragraph{
+            font-size: 20px;
+        }
+    }
+    .gotobutton{
+        width: 91px;
+        transform: translate(50px,-40px);
+    }
+}
+@media all and (min-width: 1280px) {
+    .intropar{
+        padding: 30px 275px 40px 275px;
+        &--pretitle{
+            font-size: 16px;
+        }
+        &--title{
+            font-size: 32px;
+            line-height: 45px;
+        }
+    }
+    .gotobutton{
+        width: 160px;
+        transform: translate(290px,-30px);
+    }
 }
