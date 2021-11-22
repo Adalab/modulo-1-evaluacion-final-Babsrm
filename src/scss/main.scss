@@ -1,9 +1,11 @@
-/*@import 'core/variables';
+@import 'core/variables';
 @import 'core/reset';
 @import 'components/code';
 @import 'components/links';
-@import 'layout/page';
+@import 'layout/navegationbutton';
 @import 'layout/header';
+@import 'layout/whoweare';
+@import 'layout/reasonsto';
 @import 'layout/footer';
-@import 'pages/index'; */
+@import 'pages/index'; 
 /*Aquí se ponen los partials de sass. Que son estos de aqui arriba. Se hacen llamadas con esos imports*/
