@@ -1,11 +1,14 @@
 //Reasons to purchase our product format
 .reasonsto {
   background-color: $colorbg-reasons;
-  display: grid;
-  padding: 40px 15px 200px 15px;
+  padding: 40px 15px 100px 15px;
   grid-template-columns: 100%;
   grid-template-rows: 25%;
+  display: grid;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
   &--title {
     text-transform: capitalize;
     font-family: $font-title;
@@ -40,7 +43,9 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    transform: translate(75px, 25px);
+    margin-bottom: 80px;
+    text-decoration: none;
+
     &:hover {
       animation: changecolor 10 2s;
     }
@@ -61,11 +66,11 @@
   .reasonsto {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr;
-    padding: (0, 40px, 150px, 40px);
     &--title {
       grid-column: 1/4;
       font-size: 26px;
       line-height: 45px;
+      margin-bottom: 40px;
     }
     &--paragraph {
       &__title {
@@ -73,11 +78,13 @@
       }
       &__text {
         font-size: 20px;
+        margin-bottom: 40px;
       }
     }
     &--morebutton {
       width: 210px;
-      transform: translate(265px, 50px);
+      grid-row: 3/4;
+      grid-column: 2/3;
     }
   }
 }
@@ -85,10 +92,6 @@
   .reasonsto {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 80px;
-    padding-bottom: 150px;
     &--title {
       grid-column: 1/4;
       font-size: 32px;
@@ -104,7 +107,8 @@
     }
     &--morebutton {
       width: 255px;
-      transform: translate(500px, 50px);
+      grid-row: 3/4;
+      grid-column: 2/3;
     }
   }
 }

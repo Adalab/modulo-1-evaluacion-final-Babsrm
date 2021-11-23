@@ -21,6 +21,8 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  justify-items: center;
+  align-items: center;
   &__maintitle {
     font-family: $font-title;
     padding: 15px;
@@ -29,44 +31,24 @@
     color: $colorbg-none;
     align-items: center;
     word-spacing: 100vw; /*cada palabra ocupe una linea*/
-    transform: translateY(15vh);
   }
   &__subtitle {
     font-family: $font-text;
     font-size: 16px;
     color: $colorbg-none;
     padding: 10px;
-    transform: translateY(15vh);
   }
 }
 //Scrolldown button format
 .scrolldownbutton {
+  margin-top: 30px;
   width: 45px;
   height: 45px;
   background-color: $colorbg-none;
   display: flex;
   justify-content: center;
   align-items: center;
-  // transform: translate(48vw, -20vh); /*check*/
   border-radius: 50%;
-  &__mask {
-    background-image: url(../images/ico-scroll-down.svg);
-    // mask-position: center center;
-    //mask-repeat: no-repeat;
-    &:hover {
-      animation: changecolor 10 2s;
-    }
-    @keyframes changecolor {
-      from {
-        background-color: $color-buttons;
-        border-color: $color-buttons;
-      }
-      to {
-        background-color: #00f3a6;
-        border-color: #00f3a6;
-      }
-    }
-  }
 }
 //Responsive format
 @media all and (min-width: 768px) {
@@ -78,9 +60,6 @@
       font-size: 24px;
     }
   }
-  .scrolldownbutton {
-    transform: translate(48vw, -12vh);
-  }
 }
 @media all and (min-width: 1280px) {
   .header {
@@ -90,8 +69,5 @@
     &__subtitle {
       font-size: 24px;
     }
-  }
-  .scrolldownbutton {
-    transform: translate(48vw, -10vh);
   }
 }

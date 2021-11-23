@@ -17,7 +17,7 @@
   }
   &--paragraph {
     width: 100%;
-    padding: 0px 15px 25px 15px;
+    padding: 0px 15px 12px 15px;
     color: #4a4a4a;
     font-family: $font-text;
     font-size: 18px;
@@ -26,6 +26,8 @@
 }
 //Button heading to about us format
 .gotobutton {
+  margin-top: 30px;
+  margin-bottom: 50px;
   text-decoration: none;
   width: 76px;
   height: 45px;
