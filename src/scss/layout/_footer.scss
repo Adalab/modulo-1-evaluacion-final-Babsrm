@@ -7,8 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-50%);
+  transform: translate(45vw, -50%);
+  @keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
 }
+
 //Footer format
 .footer {
   background-color: $colorbg-footer;
@@ -43,12 +46,15 @@
 .word2 {
   color: $color-buttons;
 }
-//Responsive format, still to do.
+//Responsive format
 @media all and (min-width: 768px) {
+  .button {
+    transform: translate(26vw, -50%);
+  }
   .footer {
     flex-direction: row;
     justify-content: center;
-    &--linksweb{
+    &--linksweb {
       padding-left: 10vw;
       padding-right: 10vw;
       text-align: left;
@@ -56,5 +62,10 @@
   }
   .item3 {
     order: -1;
+  }
+}
+@media all and (min-width: 1280px) {
+  .button {
+    transform: translate(24vw, -50%);
   }
 }
