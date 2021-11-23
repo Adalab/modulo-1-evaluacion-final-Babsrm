@@ -4,7 +4,6 @@
   font-family: $font-text;
   font-size: 16px;
   color: $colorbg-none;
-  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -27,6 +26,7 @@
     list-style-type: none;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
   }
   & a {
     text-decoration: none;

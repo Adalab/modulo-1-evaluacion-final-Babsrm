@@ -47,12 +47,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(48vw, -20vh); /*check*/
+  // transform: translate(48vw, -20vh); /*check*/
   border-radius: 50%;
   &__mask {
-    mask-image: url(../images/ico-scroll-down.svg);
-    mask-position: center center;
-    mask-repeat: no-repeat;
+    background-image: url(../images/ico-scroll-down.svg);
+    // mask-position: center center;
+    //mask-repeat: no-repeat;
     &:hover {
       animation: changecolor 10 2s;
     }
