@@ -7,10 +7,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(45vw, -50%);
-  @keyframes rotate {from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}}
-}
+  transform: translate(45vw, -50%);}
+  .button:hover {  
+    animation: buttonanimation 10 2s;
+    @keyframes buttonanimation {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }}
 
 //Footer format
 .footer {
