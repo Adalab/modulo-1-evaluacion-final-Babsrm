@@ -1,42 +1,58 @@
-.footer{
-    background-color: $colorbg-footer;
-    font-family: $font-text;
-    font-size: 16px;
+//Footer format
+.footer {
+  background-color: $colorbg-footer;
+  font-family: $font-text;
+  font-size: 16px;
+  color: $colorbg-none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  //Button format, not working atm ------!!!!!!!!
+  &--button {
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    background-image: url(../images/ico-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25%;
+    transform: translateY(-50%); /*que no lo veeeooo*/
+  }
+  &--linksweb {
+    display: flex;
+    border: yellow 2px solid;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+  }
+  & a {
+    text-decoration: none;
     color: $colorbg-none;
-    text-transform: uppercase;
+  }
+  &--copyright {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    &--linksweb{
-        display: flex;
-        border: yellow 2px solid;
-        list-style-type: none;
-        justify-content: center;
-        align-items: center;
+    &__heartlove {
+      color: $color-buttons;
     }
-    & a{
-        text-decoration: none;
-        color: $colorbg-none;
+    &__2 {
+      display: block;
     }
-    &--copyright{
-        display: flex;
-       flex-direction: column;
-        &__heartlove{
-            color: $color-buttons;
-        }
-        &__2{
-            display: block;
-        }
-    }
+  }
 }
-@media all and (min-width:760px){
-    .footer{
-        flex-flow: row-reverse;
-        &--linksweb{
-            display: flex;
-            flex-direction: row-reverse;
-            
-        }
+//Responsive format, still to do.
+@media all and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    padding: 45px 40px;
+    justify-content: space-around;
+    align-items: flex-start;
+    &--linksweb {
+      display: flex;
+      flex-direction: row-reverse;
     }
+  }
 }

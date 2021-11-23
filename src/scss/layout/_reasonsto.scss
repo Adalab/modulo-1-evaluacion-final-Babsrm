@@ -1,94 +1,110 @@
-.reasonsto{
-    background-color: $colorbg-reasons;
+//Reasons to purchase our product format
+.reasonsto {
+  background-color: $colorbg-reasons;
+  display: grid;
+  padding: 40px 15px 200px 15px;
+  grid-template-columns: 100%;
+  grid-template-rows: 20%;
+  text-align: center;
+  &--title {
+    text-transform: capitalize;
+    font-family: $font-title;
+    font-size: 24px;
+  }
+  &--paragraph {
     display: grid;
-    padding: 40px 15px 200px 15px;
-    grid-template-columns: 100%;
-    grid-template-rows: 20%;
-    text-align: center;
-    &--title{
-        text-transform: capitalize;
-        font-family: $font-title;
-        font-size: 24px;
+    justify-content: center;
+    &__title {
+      font-family: $font-title;
+      font-size: 18px;
+      line-height: 45px;
     }
-    &--paragraph{
-        display: grid;
-        justify-content: center;
-        &__title{
-            font-family: $font-title;
-            font-size: 18px;
-            line-height: 45px;
-        }
-        &__text{
-            font-family: $font-text;
-            font-size: 18px;
-            line-height: 30px;
-            text-align: center;
-            padding-bottom: 35px;
-            width: 200px;
-        }
+    &__text {
+      font-family: $font-text;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      padding-bottom: 35px;
+      width: 200px;
     }
-    &--morebutton{
-        font-family: $font-text;
-        font-size: 20px;
+  }
+  //Button heading to more info format
+  &--morebutton {
+    font-family: $font-text;
+    font-size: 20px;
+    background-color: $color-buttons;
+    color: $colorbg-none;
+    width: 184px;
+    height: 45px;
+    border-radius: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transform: translate(75px, 25px);
+    &:hover {
+      animation: changecolor 10 2s;
+    }
+    @keyframes changecolor {
+      from {
         background-color: $color-buttons;
-        color: $colorbg-none;
-        width: 184px;
-        height: 45px;
-        border-radius: 25px;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        transform: translate(75px, 25px);
+        border-color: $color-buttons;
+      }
+      to {
+        background-color: #00f3a6;
+        border-color: #00f3a6;
+      }
     }
+  }
 }
-@media all and (min-width: 768px){
-    .reasonsto{
-        grid-template-columns: 1fr 1fr 1fr;
+//Responsive format
+@media all and (min-width: 768px) {
+  .reasonsto {
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr;
     padding: (0, 40px, 150px, 40px);
-    &--title{
-        grid-column: 1/4;
-        font-size: 26px;
-        line-height: 45px;
+    &--title {
+      grid-column: 1/4;
+      font-size: 26px;
+      line-height: 45px;
     }
-    &--paragraph{
-        &__title{
-            font-size: 24px;
-        }
-        &__text{
-            font-size: 20px;
-        }
+    &--paragraph {
+      &__title {
+        font-size: 24px;
+      }
+      &__text {
+        font-size: 20px;
+      }
     }
-    &--morebutton{
-        width: 210px;
-        transform: translate(265px, 50px);
+    &--morebutton {
+      width: 210px;
+      transform: translate(265px, 50px);
     }
-    }
+  }
 }
 @media all and (min-width: 1280px) {
-    .reasonsto{
-        grid-template-columns: 1fr 1fr 1fr;
+  .reasonsto {
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr;
     padding-left: 45px;
     padding-right: 45px;
     padding-top: 80px;
     padding-bottom: 150px;
-    &--title{
-        grid-column: 1/4;
-        font-size: 32px;
-        line-height: 45px;
+    &--title {
+      grid-column: 1/4;
+      font-size: 32px;
+      line-height: 45px;
     }
-    &--paragraph{
-        &__title{
-            font-size: 30px;
-        }
-        &__text{
-            font-size: 20px;
-        }
+    &--paragraph {
+      &__title {
+        font-size: 30px;
+      }
+      &__text {
+        font-size: 20px;
+      }
     }
-    &--morebutton{
-        width: 255px;
-        transform: translate(500px, 50px);
+    &--morebutton {
+      width: 255px;
+      transform: translate(500px, 50px);
     }
-    }
+  }
 }

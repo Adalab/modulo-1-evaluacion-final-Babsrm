@@ -1,3 +1,4 @@
+//Fixed navegation button on top page
 .navegationbutton {
   width: 44px;
   height: 44px;
@@ -7,11 +8,13 @@
   justify-content: center;
   align-items: center;
 }
+//header format
 .header {
   display: flex;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, transparent 75%, black), url(../images/cover.jpg);
+  background: linear-gradient(to bottom, transparent 75%, black),
+    url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,6 +39,7 @@
     transform: translateY(15vh);
   }
 }
+//Scrolldown button format
 .scrolldownbutton {
   width: 45px;
   height: 45px;
@@ -45,12 +49,26 @@
   align-items: center;
   transform: translate(48vw, -20vh); /*check*/
   border-radius: 50%;
-  &__mask{
-  mask-image: url(../images/ico-scroll-down.svg);
-  mask-position: center center;
-  mask-repeat: no-repeat;
+  &__mask {
+    mask-image: url(../images/ico-scroll-down.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    &:hover {
+      animation: changecolor 10 2s;
+    }
+    @keyframes changecolor {
+      from {
+        background-color: $color-buttons;
+        border-color: $color-buttons;
+      }
+      to {
+        background-color: #00f3a6;
+        border-color: #00f3a6;
+      }
+    }
   }
 }
+//Responsive format
 @media all and (min-width: 768px) {
   .header {
     &__maintitle {
@@ -60,7 +78,7 @@
       font-size: 24px;
     }
   }
-  .scrolldownbutton{
+  .scrolldownbutton {
     transform: translate(48vw, -12vh);
   }
 }
@@ -73,7 +91,7 @@
       font-size: 24px;
     }
   }
-  .scrolldownbutton{
+  .scrolldownbutton {
     transform: translate(48vw, -10vh);
   }
 }

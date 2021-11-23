@@ -1,3 +1,4 @@
+//Who are we section format
 .intropar {
   &--pretitle {
     padding: 15px;
@@ -15,57 +16,72 @@
     text-transform: capitalize;
   }
   &--paragraph {
-      width: 100%;
-      padding: 0px 15px 25px 15px;
-      color: #4a4a4a;
-      font-family: $font-text;
-      font-size: 18px;
-      line-height: 30px;
+    width: 100%;
+    padding: 0px 15px 25px 15px;
+    color: #4a4a4a;
+    font-family: $font-text;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
-
-.gotobutton{
-    width: 76px;
-    height: 45px;
-    border: 2px $color-buttons solid;
-    border-radius: 25px;
-    transform: translateX(15px);
-    color: $color-buttons;
-    font-family: $font-title;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+//Button heading to about us format
+.gotobutton {
+  text-decoration: none;
+  width: 76px;
+  height: 45px;
+  border: 2px $color-buttons solid;
+  border-radius: 25px;
+  transform: translateX(15px);
+  color: $color-buttons;
+  font-family: $font-title;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    animation: changecolor 10 2s;
+  }
+  @keyframes changecolor {
+    from {
+      background-color: $color-buttons;
+      border-color: $color-buttons;
+    }
+    to {
+      background-color: #00f3a6;
+      border-color: #00f3a6;
+    }
+  }
 }
+//Responsive format
 @media all and (min-width: 768px) {
-    .intropar{
-        padding: 39px;
-        &--title {
-            width: 600px;
-            font-size: 26px;
-        }
-        &--paragraph{
-            font-size: 20px;
-        }
+  .intropar {
+    padding: 39px;
+    &--title {
+      width: 600px;
+      font-size: 26px;
     }
-    .gotobutton{
-        width: 91px;
-        transform: translate(50px,-40px);
+    &--paragraph {
+      font-size: 20px;
     }
+  }
+  .gotobutton {
+    width: 91px;
+    transform: translate(50px, -40px);
+  }
 }
 @media all and (min-width: 1280px) {
-    .intropar{
-        padding: 30px 275px 40px 275px;
-        &--pretitle{
-            font-size: 16px;
-        }
-        &--title{
-            font-size: 32px;
-            line-height: 45px;
-        }
+  .intropar {
+    padding: 30px 275px 40px 275px;
+    &--pretitle {
+      font-size: 16px;
     }
-    .gotobutton{
-        width: 160px;
-        transform: translate(290px,-30px);
+    &--title {
+      font-size: 32px;
+      line-height: 45px;
     }
+  }
+  .gotobutton {
+    width: 160px;
+    transform: translate(290px, -30px);
+  }
 }
