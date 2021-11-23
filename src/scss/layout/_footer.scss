@@ -1,3 +1,14 @@
+//Button format
+.button {
+  width: 45px;
+  height: 45px;
+  background-color: $colorbg-none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
 //Footer format
 .footer {
   background-color: $colorbg-footer;
@@ -7,52 +18,43 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  //Button format, not working atm ------!!!!!!!!
-  &--button {
-    width: 45px;
-    height: 45px;
-    background-color: red;
-    background-image: url(../images/ico-arrow.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 25%;
-    transform: translateY(-50%); /*que no lo veeeooo*/
-  }
+
   &--linksweb {
     display: flex;
-    border: yellow 2px solid;
     list-style-type: none;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    margin-top: 50px;
+    line-height: 35px;
   }
   & a {
     text-decoration: none;
     color: $colorbg-none;
   }
   &--copyright {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    &__heartlove {
-      color: $color-buttons;
-    }
-    &__2 {
-      display: block;
-    }
+    justify-content: center;
+    align-items: center;
   }
+}
+.word2 {
+  color: $color-buttons;
 }
 //Responsive format, still to do.
 @media all and (min-width: 768px) {
   .footer {
     flex-direction: row;
-    padding: 45px 40px;
-    justify-content: space-around;
-    align-items: flex-start;
-    &--linksweb {
-      display: flex;
-      flex-direction: row-reverse;
+    justify-content: center;
+    &--linksweb{
+      padding-left: 10vw;
+      padding-right: 10vw;
+      text-align: left;
     }
+  }
+  .item3 {
+    order: -1;
   }
 }
